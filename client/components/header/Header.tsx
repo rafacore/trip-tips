@@ -1,17 +1,22 @@
 import styles from './Header.module.css';
+import MainHeaderBackground from './MainHeaderBackground';
 
 export interface IHeader {
   text: string;
   description: string;
+  highlightText: string;
 }
 
-const Header: React.FC<IHeader> = ({ text, description }) => {
+const Header: React.FC<IHeader> = ({ text, description, highlightText }) => {
   return (
     <header className={styles.header}>
-      <div className={styles.content}>
-        <h1 className={styles.highlight}>{text}</h1>
-        <p>{description}</p>
-      </div>
+      <>
+        <MainHeaderBackground />
+
+        <header className={styles.header}>
+          <div className={styles.logo}>Trip tips</div>
+        </header>
+      </>
     </header>
   );
 };
