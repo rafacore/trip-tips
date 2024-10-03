@@ -4,6 +4,7 @@ import FilterBar from '@/components/filters/filters-bar/FiltersBar';
 import { getTrips } from '@/lib/actions';
 import { Suspense } from 'react';
 import Link from 'next/link';
+import ImageSlideShow from '@/components/ImageSlide/ImageSlide';
 
 export default async function Home({ searchParams }: any) {
   const search = searchParams.search;
@@ -16,6 +17,16 @@ export default async function Home({ searchParams }: any) {
   return (
     <>
       <main className={styles.main}>
+        <header>
+          <ImageSlideShow sampleTextProp="test" />
+        </header>
+      
+        <FilterBar />
+        <Suspense
+          fallback={<p className={styles.loading}>Fetching trips data...</p>}
+        >
+          <TripsGrid trips={tripsresult} />
+        </Suspense>
         <div className={styles.controls}>
           <Link
             className={`${page <= 1 ? styles.disabled : ''}`}
@@ -45,12 +56,6 @@ export default async function Home({ searchParams }: any) {
             Next
           </Link>
         </div>
-        <FilterBar />
-        <Suspense
-          fallback={<p className={styles.loading}>Fetching trips data...</p>}
-        >
-          <TripsGrid trips={tripsresult} />
-        </Suspense>
       </main>
     </>
   );
