@@ -3,3 +3,13 @@
     padding: 0;
   }
   
+
+  .header-background {
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  

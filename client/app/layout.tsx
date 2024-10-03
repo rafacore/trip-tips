@@ -16,7 +16,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header
-          text="Find your next trip"
+          text="Find your"
+          highlightText="nex trip"
           description="Choose your favorite place and have fun !"
         />
         {children}
