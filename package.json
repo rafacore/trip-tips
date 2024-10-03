@@ -1,0 +1,15 @@
+{
+    "name": "trip-tips",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "deploy": "vercel --prod"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+      "vercel": "^23.1.2"
+    }
+  }
