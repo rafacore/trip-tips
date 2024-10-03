@@ -8,7 +8,7 @@ const FilterBar: React.FC = () => {
   return (
     <>
       <div className={styles.content}>
-        <Search />
+        <Search placeholder="search by" />
         <Sort sortByLabel="sort by check-in date " />
       </div>
     </>

@@ -1,10 +1,13 @@
-// import styles from './Search.module.css';
+ import styles from './Search.module.css';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { useDebounce } from 'use-debounce';
-export interface ISearch {}
 
-const Search: React.FC = () => {
+export interface ISearch {
+  placeholder: string;
+}
+
+const Search: React.FC<ISearch> = ({placeholder}) => {
   const searchParams = useSearchParams();
 
   const search = searchParams.get('search')?.toString();
@@ -26,10 +29,12 @@ const Search: React.FC = () => {
 
   return (
     <input
+    className={styles.input}
       type="text"
       name="search"
       onChange={(e) => setSearchText(e.target.value)}
       defaultValue={search}
+      placeholder={placeholder}
     />
   );
 };
