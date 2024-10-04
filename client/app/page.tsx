@@ -16,11 +16,10 @@ export default async function Home({ searchParams }: any) {
 
   return (
     <>
+      <header className={styles.slideImage}>
+        <ImageSlideShow />
+      </header>
       <main className={styles.main}>
-        <header>
-          <ImageSlideShow sampleTextProp="test" />
-        </header>
-      
         <FilterBar />
         <Suspense
           fallback={<p className={styles.loading}>Fetching trips data...</p>}
