@@ -1,1 +1,1 @@
- export let tripsApi = "https://trip-tips-server.vercel.app/";
+ export let tripsApi = `${process.env.NEXT_PUBLIC_API_URL}`;
