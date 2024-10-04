@@ -12,7 +12,7 @@
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  background: linear-gradient(90deg, #727a9a, #d8dbe9);
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
@@ -20,7 +20,7 @@
 
 .controls a:hover,
 .controls a:active {
-  background: linear-gradient(90deg, #fd4715, #f9b241);
+  background: linear-gradient(90deg, #727a9a, #d8dbe9);
 }
 .controls .disabled,
 .controls .disabled:hover {
