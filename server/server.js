@@ -3,7 +3,7 @@ const app = express();
 
 const tripsData = require("./trips.js");
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json(tripsData);
 });
 
