@@ -31,6 +31,7 @@ useEffect(() => {
   <div className={styles.container}>
     {IMAGES_BANNER.map((img, index)=> (
  <Image
+ key={index}
  className={index === currentImgIndex ? styles.active : ''}
  src={img.image}
  alt={img.alt}
