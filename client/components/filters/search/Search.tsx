@@ -25,7 +25,7 @@ const Search: React.FC<ISearch> = ({placeholder}) => {
       searchtparams.set('search', searchQuery);
     }
     replace(`${pathname}?${searchtparams.toString()}`);
-  }, [searchQuery]);
+  }, [searchQuery, searchParams, pathname]);
 
   return (
     <input

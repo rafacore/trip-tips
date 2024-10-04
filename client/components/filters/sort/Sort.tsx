@@ -21,7 +21,7 @@ const Sort: React.FC<ISort> = ({ sortByLabel }) => {
     }
 
     replace(`${pathname}?${sortparams.toString()}`);
-  }, [sort]);
+  }, [sort, searchParams, pathname]);
   return (
     <>
       <div>

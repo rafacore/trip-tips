@@ -7,7 +7,7 @@ export interface IHeader {
   highlightText: string;
 }
 
-const Header: React.FC<IHeader> = ({ text, description, highlightText }) => {
+const Header: React.FC<IHeader> = () => {
   return (
     <header className={styles.header}>
       <>
